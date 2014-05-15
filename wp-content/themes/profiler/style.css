@@ -1,0 +1,346 @@
+/*
+Theme Name: Profiler
+Theme URI: http://bagtoons.com/
+Author: Mark Harris
+Author URI: http://bagtoons.com/
+Description: Profile Framework
+Version: 1.0
+*/
+
+body {
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+div {
+    /*padding: 50px 20px;*/
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: none
+}
+
+input {
+    font-size: 14px;
+}
+
+form td {
+    padding: 5px;
+}
+
+td.right {
+    text-align: right;
+}
+
+#game .message-red {
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    background-color: rgb(255, 240, 240);
+    padding: 10px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.message-red a {
+    color: blue;
+    font-weight: bold;
+}
+
+.message-red a:hover {
+    color: red;
+    font-weight: bold;
+}
+
+#game .message-green {
+    border-top: 2px solid green;
+    border-bottom: 2px solid green;
+    background-color: rgb(237, 255, 238);
+    padding: 10px;
+    margin: 10px 0;
+    color: #333;
+}
+
+tr#uploading {
+    display: none;
+}
+
+.recent-profile {
+    border: 1px solid #999;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.recent-profile .pic {
+    float: left;
+    width: 200px;
+    padding: 10px;
+}
+
+.recent-profile .right {
+    width: 500px;
+    float: left;
+    padding: 10px;
+}
+
+.clear {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+#game-list td,
+.waiting td {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+#game #content,
+#game #profile,
+#game #join-game,
+#game #wahoo-register,
+#game #wahoo-login {
+    border: 3px solid #726B66;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 11px;
+    margin: 20px;
+    padding: 30px;
+    background: url('images/bg-black-28.png');
+}
+
+button,
+input[type="submit"] {
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #70D197;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #300;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#00AC45), to(#620));
+    background-image: -webkit-linear-gradient(bottom, #00AC45, #00E75D);
+    background-image:    -moz-linear-gradient(bottom, #00AC45, #00E75D);
+    background-image:     -ms-linear-gradient(bottom, #00AC45, #00E75D);
+    background-image:      -o-linear-gradient(bottom, #00AC45, #00E75D);
+    background-image:         linear-gradient(bottom, #00AC45, #00E75D);
+    text-shadow: -1px -1px #757575;
+}
+
+#menu ul {
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 0;
+}
+
+#menu li {
+    float: left;
+    margin: 0;
+    padding: 8px 12px;
+}
+
+#profile-pic-uplaod {
+    float: left;
+    border-right: 1px solid #666;
+    width: 240px;
+    margin: 30px 10px 0 0;
+}
+
+input[type="password"],
+input[type="text"],
+textarea {
+    border: 1px solid #70D197;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+#player-list {
+    height: 400px;
+}
+
+.sub-player-list table,
+#game-list table,
+#player-list table {
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+.sub-player-list td,
+#game-list td,
+#player-list td {
+    padding: 10px 20px;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    border-right: none;
+    border-bottom: none;
+}
+
+.sub-player-list tr:nth-of-type(1) > td:nth-of-type(1),
+#game-list tr:nth-of-type(1) > td:nth-of-type(1),
+#player-list tr:nth-of-type(1) > td:nth-of-type(1) {
+    border-top: 1px solid #999;
+    border-top-left-radius: 8px;
+}
+
+.sub-player-list tr:nth-last-of-type(1) > td:nth-of-type(1),
+#game-list tr:nth-last-of-type(1) > td:nth-of-type(1),
+#player-list tr:nth-last-of-type(1) > td:nth-of-type(1) {
+    border-bottom: 1px solid #999;
+    border-bottom-left-radius: 8px;
+}
+
+.sub-player-list tr:nth-of-type(1) > td:nth-last-of-type(1),
+#game-list tr:nth-of-type(1) > td:nth-last-of-type(1),
+#player-list tr:nth-of-type(1) > td:nth-last-of-type(1) {
+    border-right: 1px solid #999;
+    border-top-right-radius: 8px;
+}
+
+.sub-player-list tr:nth-last-of-type(1) > td:nth-last-of-type(1),
+#game-list tr:nth-last-of-type(1) > td:nth-last-of-type(1),
+#player-list tr:nth-last-of-type(1) > td:nth-last-of-type(1) {
+    border-right: 1px solid #999;
+    border-bottom-right-radius: 8px;
+}
+
+.sub-player-list td:nth-last-of-type(1),
+#game-list td:nth-last-of-type(1),
+#player-list td:nth-last-of-type(1) {
+    border-right: 1px solid #999;
+}
+
+.sub-player-list tr:nth-last-of-type(1) > td,
+#game-list tr:nth-last-of-type(1) > td,
+#player-list tr:nth-last-of-type(1) > td {
+    border-bottom: 1px solid #999;
+}
+
+.sub-player-list td:nth-last-of-type(1) {
+    width:210px;
+}
+
+#player-list td:nth-last-of-type(1) {
+    width: 300px;
+}
+
+.sub-player-list td.player-1,
+#game-list td.player-1,
+#player-list td.player-1 {
+    background-color: red;
+}
+
+.sub-player-list td.player-2,
+#game-list td.player-2,
+#player-list td.player-2 {
+    background-color: white;
+    color: black;
+}
+
+.sub-player-list td.player-3,
+#game-list td.player-3,
+#player-list td.player-3 {
+    background-color: #6ad940;
+}
+
+.sub-player-list td.player-4,
+#game-list td.player-4,
+#player-list td.player-4 {
+    background-color: black;
+}
+
+.sub-player-list td,
+#player-list td {
+    background: #333;
+}
+
+tr.table-header td {
+    background-color: #999;
+    color: #000;
+}
+
+ul#pages {
+    list-style-type: none;
+    margin: 50px 0 0;
+    padding: 0;
+    border-top: 1px solid #6D4F43;
+    border-bottom: 1px solid #6D4F43;
+}
+
+ul#pages li {
+    background-color: #333;
+    padding: 10px;
+}
+
+#email-2,
+#email-1 {
+    position: absolute;
+    left: -9999px;
+}
+
+#home-link {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+}
+
+#content h2 {
+    padding: 0;
+    margin: 20px 0;
+}
+
+#player-list-side {
+    background: #525252;
+    border-top: 1px solid #6D4F43;
+    border-bottom: 1px solid #6D4F43;
+}
+
+#player-list-side h3 {
+    padding: 10px 0 10px 36px;
+}
+
+#player-list-side ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#player-list-side li {
+    margin: 0;
+    padding: 10px 0 10px 36px;
+    background-position: 10px 11px;
+    background-repeat: no-repeat;
+}
+
+#player-list-side li#player-1 {
+    background-image: url('images/red_marble_small.png');
+}
+
+#player-list-side li#player-2 {
+    background-image: url('images/white_marble_small.png');
+}
+
+#player-list-side li#player-3 {
+    background-image: url('images/green_marble_small.png');
+}
+
+#player-list-side li#player-4 {
+    background-image: url('images/black_marble_small.png');
+}
+
+#end-game button {
+    margin: 10px;
+}
